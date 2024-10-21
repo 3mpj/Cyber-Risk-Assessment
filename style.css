@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.question {
+    margin: 15px 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.results-section {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.chart-section {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+/* Container for the table to make it responsive */
+.table-container {
+    margin: 20px 0;
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Style for the findings table */
+#findingsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+/* Table headers */
+#findingsTable th, #findingsTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#findingsTable th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Table body rows */
+#findingsTable td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Alternating row colors */
+#findingsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+#findingsTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style for the risk score column (bold text) */
+#findingsTable td:nth-child(2) {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Style for the risk level column */
+#findingsTable td:nth-child(3) {
+    font-weight: bold;
+    color: #FF6347; /* Default Risk level color */
+}
+
+/* Highlight different risk levels */
+#findingsTable td[data-risk="High"] {
+    color: #FF4500; /* High Risk color */
+}
+
+#findingsTable td[data-risk="Medium"] {
+    color: #FFA500; /* Medium Risk color */
+}
+
+#findingsTable td[data-risk="Low"] {
+    color: #32CD32; /* Low Risk color */
+}
+
