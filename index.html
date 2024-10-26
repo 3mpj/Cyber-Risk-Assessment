@@ -1,161 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Cyber Risk Assessment</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Include Chart.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <div class="container">
-        <h1>Cyber Risk Assessment</h1>
-
-        <form id="risk-assessment-form">
-
-            <!-- Identify Function (Asset Management, Governance) -->
-            <h2>Identify</h2>
-
-            <div class="question">
-                <label for="identify-assets">1. Asset Management: Does the organization have a current inventory of hardware, software, and data assets?</label>
-                <select name="identify-assets" id="identify-assets" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Cybersecurity Management
+    </title>
+    <meta name="description" content="Simple landing page" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #5e33d5 0%, #007bff 100%);
+      }
+    </style>
+  </head>
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+            <div class="pl-4 flex items-center">
+                <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="index.html">
+                    CyberSecurity
+                </a>
             </div>
-
-            <div class="question">
-                <label for="identify-governance">2. Governance: Are security roles, responsibilities, and policies well defined and implemented?</label>
-                <select name="identify-governance" id="identify-governance" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
             </div>
-
-            <!-- Protect Function (Data Security, Access Control) -->
-            <h2>Protect</h2>
-
-            <div class="question">
-                <label for="protect-data">3. Data Security: Are effective data protection methods (e.g., encryption, backups) in place?</label>
-                <select name="protect-data" id="protect-data" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" href="learn.html">learn</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-white no-underline hover:text-gray-300 hover:text-underline py-2 px-4" href="survey.html">Assess</a>
+                    </li>
+                </ul>
             </div>
-
-            <div class="question">
-                <label for="protect-access">4. Access Control: Are user access rights strictly enforced and regularly reviewed?</label>
-                <select name="protect-access" id="protect-access" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-
-            <!-- Detect Function (Anomalies, Continuous Monitoring) -->
-            <h2>Detect</h2>
-
-            <div class="question">
-                <label for="detect-anomalies">5. Anomalies and Events: Does the organization have mechanisms to detect anomalous activity?</label>
-                <select name="detect-anomalies" id="detect-anomalies" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-
-            <div class="question">
-                <label for="detect-monitoring">6. Continuous Monitoring: Are continuous monitoring tools in place to detect potential cybersecurity events?</label>
-                <select name="detect-monitoring" id="detect-monitoring" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-
-            <!-- Respond Function (Incident Response Planning, Communication) -->
-            <h2>Respond</h2>
-
-            <div class="question">
-                <label for="respond-planning">7. Response Planning: Does the organization have a documented incident response plan in place?</label>
-                <select name="respond-planning" id="respond-planning" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-
-            <div class="question">
-                <label for="respond-communication">8. Communications: Are there communication protocols for internal and external stakeholders in case of a cyber incident?</label>
-                <select name="respond-communication" id="respond-communication" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-
-            <!-- Recover Function (Recovery Planning, Improvements) -->
-            <h2>Recover</h2>
-
-            <div class="question">
-                <label for="recover-planning">9. Recovery Planning: Does the organization have a recovery plan to restore services after a cybersecurity incident?</label>
-                <select name="recover-planning" id="recover-planning" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-
-            <div class="question">
-                <label for="recover-improvement">10. Improvements: Are lessons learned from past incidents used to improve future response and recovery strategies?</label>
-                <select name="recover-improvement" id="recover-improvement" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-
-            <!-- <button type="submit">Submit Assessment</button> -->
-        </form>
+        </div>
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+    <!--Hero-->
+    <div class="pt-24">
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <!--Left Col-->
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+          <p class="uppercase tracking-loose w-full">Cyber Risk Management Assessment Platform</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">
+            Learn or refresh yourself with the basics of cyber security and cyber risk management
+          </h1>
+          <p class="leading-normal text-2xl mb-8">
+            Take our top cyber risk assessment survey 
+          </p>
+        </div>
+        <!--Right Col-->
+        <div class="w-full md:w-3/5 py-6 text-center">
+          <img class="w-full md:w-4/5 z-50" src="images/endpoint.png" />
+        </div>
+      </div>
     </div>
+    <section class="container mx-auto text-center py-6 mb-12">
+      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+        Start Now!
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <a href="learn.html"><button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        Action!
+      </button></a>
+    </section>
+    
+    <script>
+    var scrollpos = window.scrollY;
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var navaction = document.getElementById("navAction");
+    var brandname = document.getElementById("brandname");
+    var toToggle = document.querySelectorAll(".toggleColour");
+    var navLinks = document.querySelectorAll("#nav-content a"); // Add this line to select all nav links
 
+    document.addEventListener("scroll", function () {
+    scrollpos = window.scrollY;
 
-    <!-- Results Section -->
-    <div class="results-section" id="results-section" style="display: block;">
-        <h2>Risk Assessment Results</h2>
-        <!-- Table View for Detailed Findings and Recommendations -->
-<div class="table-container">
-    <table id="findingsTable" border="1">
-        <thead>
-            <tr>
-                <th>Category</th>
-                <th>Risk Score</th>
-                <th>Risk Level</th>
-                <th>Recommendations</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Dynamic content will be inserted here -->
-        </tbody>
-    </table>
-</div>
-        <!-- Chart Canvas -->
-        <canvas id="riskChart" style="max-height: 400px;"></canvas>
-        <!-- Bar Chart Section -->
-        <canvas id="barChart" style="max-height: 400px;"></canvas>
-        <!-- Pie Chart-->
-        <canvas id="pieChart" style="max-height: 400px;"></canvas>
-        <!-- Stacked Bar Chart -->
-        <canvas id="stackedBarChart" style="max-height: 400px;"></canvas>
-        <!-- Line Chart -->
-        <canvas id="lineChart" style="max-height: 400px;"></canvas>
-    </div>
+    if (scrollpos > 10) {
+        header.classList.add("bg-white");
+        if(navaction) {  // Check if navaction exists
+            navaction.classList.remove("bg-white");
+            navaction.classList.add("gradient");
+            navaction.classList.remove("text-gray-800");
+            navaction.classList.add("text-white");
+        }
+        
+        // Update toggle elements
+        for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.remove("text-white");
+            toToggle[i].classList.add("text-gray-800");
+        }
+        
+        // Update nav links color
+        navLinks.forEach(link => {
+            link.classList.remove("text-white");
+            link.classList.add("text-gray-800");
+        });
 
+        header.classList.add("shadow");
+        navcontent.classList.remove("bg-gray-100");
+        navcontent.classList.add("bg-white");
+    } else {
+        header.classList.remove("bg-white");
+        if(navaction) {  // Check if navaction exists
+            navaction.classList.remove("gradient");
+            navaction.classList.add("bg-white");
+            navaction.classList.remove("text-white");
+            navaction.classList.add("text-gray-800");
+        }
+        
+        // Update toggle elements
+        for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.remove("text-gray-800");
+            toToggle[i].classList.add("text-white");
+        }
+        
+        // Update nav links color
+        navLinks.forEach(link => {
+            link.classList.remove("text-gray-800");
+            link.classList.add("text-white");
+        });
 
-    <script src="script.js"></script>
-</body>
+        header.classList.remove("shadow");
+        navcontent.classList.remove("bg-white");
+        navcontent.classList.add("bg-gray-100");
+    }
+});
+    </script>
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
 </html>

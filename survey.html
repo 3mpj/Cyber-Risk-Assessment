@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Cyber Risk Assessment</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cyber Risk Assessment</h1>
+
+        <form id="risk-assessment-form">
+
+            <!-- Identify Function (Asset Management, Governance) -->
+            <h2>Identify</h2>
+
+            <div class="question">
+                <label for="identify-assets">1. Asset Management: Does the organization have a current inventory of hardware, software, and data assets?</label>
+                <select name="identify-assets" id="identify-assets" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="identify-governance">2. Governance: Are security roles, responsibilities, and policies well defined and implemented?</label>
+                <select name="identify-governance" id="identify-governance" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <!-- Protect Function (Data Security, Access Control) -->
+            <h2>Protect</h2>
+
+            <div class="question">
+                <label for="protect-data">3. Data Security: Are effective data protection methods (e.g., encryption, backups) in place?</label>
+                <select name="protect-data" id="protect-data" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="protect-access">4. Access Control: Are user access rights strictly enforced and regularly reviewed?</label>
+                <select name="protect-access" id="protect-access" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <!-- Detect Function (Anomalies, Continuous Monitoring) -->
+            <h2>Detect</h2>
+
+            <div class="question">
+                <label for="detect-anomalies">5. Anomalies and Events: Does the organization have mechanisms to detect anomalous activity?</label>
+                <select name="detect-anomalies" id="detect-anomalies" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="detect-monitoring">6. Continuous Monitoring: Are continuous monitoring tools in place to detect potential cybersecurity events?</label>
+                <select name="detect-monitoring" id="detect-monitoring" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <!-- Respond Function (Incident Response Planning, Communication) -->
+            <h2>Respond</h2>
+
+            <div class="question">
+                <label for="respond-planning">7. Response Planning: Does the organization have a documented incident response plan in place?</label>
+                <select name="respond-planning" id="respond-planning" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="respond-communication">8. Communications: Are there communication protocols for internal and external stakeholders in case of a cyber incident?</label>
+                <select name="respond-communication" id="respond-communication" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <!-- Recover Function (Recovery Planning, Improvements) -->
+            <h2>Recover</h2>
+
+            <div class="question">
+                <label for="recover-planning">9. Recovery Planning: Does the organization have a recovery plan to restore services after a cybersecurity incident?</label>
+                <select name="recover-planning" id="recover-planning" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="recover-improvement">10. Improvements: Are lessons learned from past incidents used to improve future response and recovery strategies?</label>
+                <select name="recover-improvement" id="recover-improvement" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <!-- <button type="submit">Submit Assessment</button> -->
+        </form>
+    </div>
+
+
+    <!-- Results Section -->
+    <div class="results-section" id="results-section" style="display: block;">
+        <h2>Risk Assessment Results</h2>
+        <!-- Table View for Detailed Findings and Recommendations -->
+<div class="table-container">
+    <table id="findingsTable" border="1">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Risk Score</th>
+                <th>Risk Level</th>
+                <th>Recommendations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic content will be inserted here -->
+        </tbody>
+    </table>
+</div>
+        <!-- Chart Canvas -->
+        <canvas id="riskChart" style="max-height: 400px;"></canvas>
+        <!-- Bar Chart Section -->
+        <canvas id="barChart" style="max-height: 400px;"></canvas>
+        <!-- Pie Chart-->
+        <canvas id="pieChart" style="max-height: 400px;"></canvas>
+        <!-- Stacked Bar Chart -->
+        <canvas id="stackedBarChart" style="max-height: 400px;"></canvas>
+        <!-- Line Chart -->
+        <canvas id="lineChart" style="max-height: 400px;"></canvas>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

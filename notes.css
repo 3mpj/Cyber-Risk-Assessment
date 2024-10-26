@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.content-section h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.content-block {
+    background-color: #f0f4f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.highlight-box, .quote-box, .faq, .tips-grid {
+    margin: 20px 0;
+}
+
+.highlight-box {
+    background-color: #e8f4fd;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+}
+
+.quote-box {
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #ffc107;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #007bff;
+    border: 1px solid #e0e0e0;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.content-header {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.timeline {
+    border-left: 2px solid #007bff;
+    padding-left: 15px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    top: 5px;
+}
+
+.faq-item h4 {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.faq-item p {
+    display: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #f0f4f8;
+}
+
+.tip-item {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.learning-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.learning-footer button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.learning-footer button:hover {
+    background-color: #0056b3;
+}
+
+.visual-diagram {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.visual-diagram img {
+    max-width: 30%;
+    height: auto;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    margin: 20px 0;
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Style for the findings table */
+#findingsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+/* Table headers */
+#findingsTable th, #findingsTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#findingsTable th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Table body rows */
+#findingsTable td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Alternating row colors */
+#findingsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+#findingsTable tr:hover {
+    background-color: #f1f1f1;
+}
