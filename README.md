@@ -11,7 +11,7 @@ Cyber Risk Assessment tool for 418 Cyber Security Project
 **Run "php -S localhost:8080" if you have php installed otherwise just go "localhost/name_of_your_folder"**
 
 ## Features
-*Table Top Exercises Module*
-*Learn Module*
-*Assess Module*
+*Table Top Exercises Module*\
+*Learn Module*\
+*Assess Module*\
 *Scenarios*
