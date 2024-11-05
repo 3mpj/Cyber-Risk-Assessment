@@ -1,16 +1,16 @@
 # CyberAssessment Platform
 Cyber Risk Assessment tool for 418 Cyber Security Project
 
-## Authors
-@3mpj
+### Authors
 
-## How to Use
+
+### How to Use
 
 **Extract the archive or clone and put it in the folder you want**
 
 **Run "php -S localhost:8080" if you have php installed otherwise just go "localhost/name_of_your_folder"**
 
-## Features
+### Features
 *Table Top Exercises Module*\
 *Learn Module*\
 *Assess Module*\
