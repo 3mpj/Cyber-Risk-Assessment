@@ -3,15 +3,15 @@ Cyber Risk Assessment tool for 418 Cyber Security Project
 
 ## Authors
 @3mpj
-@
-@
 
 ## How to Use
-Extract the archive or clone and put it in the folder you want
-Run "php -S localhost:8080" if you have php installed otherwise just go "localhost/name_of_your_folder"
+
+**Extract the archive or clone and put it in the folder you want**
+
+**Run "php -S localhost:8080" if you have php installed otherwise just go "localhost/name_of_your_folder"**
 
 ## Features
-Table Top Exercises Module
-Learn Module
-Assess Module
-Scenarios
+*Table Top Exercises Module*
+*Learn Module*
+*Assess Module*
+*Scenarios*
