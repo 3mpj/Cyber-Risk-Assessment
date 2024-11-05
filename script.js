@@ -37,22 +37,31 @@ document.addEventListener("DOMContentLoaded", function() {
                 labels: ['High Risk', 'Medium Risk', 'Low Risk'], // Risk levels
                 datasets: [{
                     label: 'Risk Distribution',
-                    data: [], // This will be updated dynamically based on the risk levels
+                    data: [], // updated dynamically based on the risk levels
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)', // High Risk
-                        'rgba(54, 162, 235, 0.2)', // Medium Risk
-                        'rgba(75, 192, 192, 0.2)'  // Low Risk
+                        'rgba(255, 69, 0, 0.2)', // High Risk
+                        'rgba(255, 165, 0, 0.2)', // Medium Risk
+                        'rgba(50, 205, 50, 0.2)'  // Low Risk
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(75, 192, 192, 1)'
+                        'rgba(255, 69, 0, 1)',
+                        'rgba(255, 165, 0, 1)',
+                        'rgba(50, 205, 50, 1)'
                     ],
                     borderWidth: 1
                 }]
             },
             options: {
-                responsive: true
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: top,
+                    },
+                    title: {
+                        display: true,
+                        text: 'Risk Distribution'
+                    }
+                }
             }
         });
     }
@@ -330,8 +339,19 @@ function initializeBarChart() {
         },
         options: {
             scales: {
+                x: {
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Categories/Function)'
+                    }
+                },
                 y: {
                     beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Average Risk Score'
+                    },
                     max: 3 // Risk score max is 3
                 }
             }
@@ -351,7 +371,7 @@ function updateBarChart() {
     barChart.update();
 }
 window.onload = function() {
-    // Initialize the bar chart when the page loads
+    // Initialize the bar chart 
     initializeBarChart();
     // Initialize the pie chart
     initializePieChart();
@@ -363,7 +383,7 @@ window.onload = function() {
 
 
     
-    // Initialize chart with empty data
+    // Initialize radar chart with empty data
     function initializeChart() {
         const ctx = document.getElementById('riskChart').getContext('2d');
         chart = new Chart(ctx, {

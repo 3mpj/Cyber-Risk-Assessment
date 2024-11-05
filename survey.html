@@ -5,152 +5,528 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprehensive Cyber Risk Assessment</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Cyber Risk Assessment</h1>
+        <h1>Cyber Risk Assessment Questionnaire</h1>
+        <p>Below are a set of questions that are designed to help organizations assess their Cyber Risk Management Position</p>
 
         <form id="risk-assessment-form">
 
-            <!-- Identify Function (Asset Management, Governance) -->
+            <!-- Identify -->
             <h2>Identify</h2>
 
             <div class="question">
-                <label for="identify-assets">1. Asset Management: Does the organization have a current inventory of hardware, software, and data assets?</label>
+                <h3>Asset Management</h3>
+                <label for="identify-assets">1. Do you maintain an updated inventory of all hardware and software assets within the organization?</label>
                 <select name="identify-assets" id="identify-assets" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-assets">2. Are critical assets identified and categorized based on their importance to the organization?</label>
+                <select name="identify-assets" id="identify-assets" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-assets">3. Is there a process to monitor and update asset records when new devices or software are added or removed?</label>
+                <select name="identify-assets" id="identify-assets" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-assets">4. Do you have a system in place to track and label assets by their ownership, location, and classification?</label>
+                <select name="identify-assets" id="identify-assets" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-assets">5. Are digital and physical assets regularly audited to ensure they are properly documented?</label>
+                <select name="identify-assets" id="identify-assets" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
             <div class="question">
-                <label for="identify-governance">2. Governance: Are security roles, responsibilities, and policies well defined and implemented?</label>
+                <h3>Governance</h3>
+                <label for="identify-governance">1. Are cybersecurity roles and responsibilities clearly defined and assigned within the organization?</label>
                 <select name="identify-governance" id="identify-governance" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-governance">2. Do you have a formal cybersecurity policy that aligns with your business objectives?</label>
+                <select name="identify-governance" id="identify-governance" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-governance">3. Is there a documented process for approving, managing, and reviewing cybersecurity policies and standards?</label>
+                <select name="identify-governance" id="identify-governance" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-governance">4. Are risk management and cybersecurity integrated into the overall corporate governance framework?</label>
+                <select name="identify-governance" id="identify-governance" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-governance">5. Is cybersecurity performance regularly reported to top management?</label>
+                <select name="identify-governance" id="identify-governance" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
-
-            <!-- Protect Function (Data Security, Access Control) -->
+            <div class="question">
+                <h3>Risk Assessment</h3>
+                <label for="identify-risk">1. Do you conduct regular risk assessments to identify potential threats and vulnerabilities to your organization?</label>
+                <select name="identify-risk" id="identify-risk">
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-risk">2. Are risk assessments updated after significant changes to your technology, processes, or environment?</label>
+                <select name="identify-risk" id="identify-risk">
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-risk">3. Do you evaluate the potential impact of identified risks on critical business operations?</label>
+                <select name="identify-risk" id="identify-risk">
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+            </div>
+            <div class="question">
+                <h3>Supply Chain Risk Management</h3>
+                <label for="identify-supplyrisk">1. Do you assess the cybersecurity posture of your suppliers, partners, and vendors?</label>
+                <select name="identify-supplyrisk" id="identify-supplyrisk">
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-supplyrisk">2. Are there formal contracts or agreements outlining cybersecurity requirements for third parties?</label>
+                <select name="identify-supplyrisk" id="identify-supplyrisk">
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="identify-supplyrisk">3. Do you have a contingency plan for cybersecurity incidents originating from third parties?</label>
+                <select name="identify-supplyrisk" id="identify-supplyrisk">
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+            </div>
+            <!-- Protect -->
             <h2>Protect</h2>
 
             <div class="question">
-                <label for="protect-data">3. Data Security: Are effective data protection methods (e.g., encryption, backups) in place?</label>
-                <select name="protect-data" id="protect-data" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                <h3>Access Control</h3>
+                <label for="protect-access">1. Are user accounts, including privileged accounts, regularly reviewed and managed?</label>
+                <select name="protect-access" id="protect-access" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="protect-access">2. Is multi-factor authentication (MFA) enforced for accessing sensitive systems?</label>
+                <select name="protect-access" id="protect-access" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="protect-access">3. Are access permissions based on the principle of least privilege?</label>
+                <select name="protect-access" id="protect-access" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
             <div class="question">
-                <label for="protect-access">4. Access Control: Are user access rights strictly enforced and regularly reviewed?</label>
-                <select name="protect-access" id="protect-access" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                <h3>Data Security</h3>
+                <label for="protect-data">1. Are data encryption practices in place for sensitive data both in transit and at rest?</label>
+                <select name="protect-data" id="protect-data" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="protect-data">2. Is data classification conducted to identify and prioritize the protection of sensitive information?</label>
+                <select name="protect-data" id="protect-data" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="protect-data">3. Are backup solutions implemented, and are backups regularly tested for integrity?</label>
+                <select name="protect-data" id="protect-data" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
-            <!-- Detect Function (Anomalies, Continuous Monitoring) -->
+            <div class="question">
+                <h3>Training & Awareness</h3>
+                <label for="protect-ta">1. Are cybersecurity awareness training programs conducted for all employees?</label>
+                <select name="protect-ta" id="protect-ta" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="protect-ta">2. Do you conduct regular security drills or simulated attacks to evaluate the staff's preparedness?</label>
+                <select name="protect-ta" id="protect-ta" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="protect-ta">3. Do you measure the effectiveness of training through assessments or tests?</label>
+                <select name="protect-ta" id="protect-ta" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+            </div>
+
+
+            <!-- Detect -->
             <h2>Detect</h2>
 
             <div class="question">
-                <label for="detect-anomalies">5. Anomalies and Events: Does the organization have mechanisms to detect anomalous activity?</label>
+                <h3>Anomalies and Events</h3>
+                <label for="detect-anomalies">1. Do you have systems in place to detect unusual behavior or anomalies in network traffic?</label>
                 <select name="detect-anomalies" id="detect-anomalies" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="detect-anomalies">2. Are alerts generated and escalated when unexpected activities are detected?</label>
+                <select name="detect-anomalies" id="detect-anomalies" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="detect-anomalies">3. Are logs analyzed to identify signs of unauthorized access or data breaches?</label>
+                <select name="detect-anomalies" id="detect-anomalies" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
             <div class="question">
-                <label for="detect-monitoring">6. Continuous Monitoring: Are continuous monitoring tools in place to detect potential cybersecurity events?</label>
+                <h3>Continuous Monitoring</h3>
+                <label for="detect-monitoring">1. Is there a dedicated team responsible for continuous monitoring of security events?</label>
                 <select name="detect-monitoring" id="detect-monitoring" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="detect-monitoring">2. Do you use automated tools to correlate and analyze log data from different sources?</label>
+                <select name="detect-monitoring" id="detect-monitoring" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="detect-monitoring">3. Are network and endpoint monitoring tools deployed for real-time threat detection?</label>
+                <select name="detect-monitoring" id="detect-monitoring" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+            </div>
+            <div class="question">
+                <h3>Log Monitoring</h3>
+                <label for="detect-logmonitoring">1. Are logs collected and analyzed from key systems, including servers, firewalls, and databases?</label>
+                <select name="detect-logmonitoring" id="detect-logmonitoring" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="detect-logmonitoring">2. Do you have a central repository for aggregating and storing log data?</label>
+                <select name="detect-logmonitoring" id="detect-logmonitoring" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="detect-logmonitoring">3. Is there a log review process for detecting unauthorized access or changes?</label>
+                <select name="detect-logmonitoring" id="detect-logmonitoring" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
-            <!-- Respond Function (Incident Response Planning, Communication) -->
+            <!-- Respond -->
             <h2>Respond</h2>
 
             <div class="question">
-                <label for="respond-planning">7. Response Planning: Does the organization have a documented incident response plan in place?</label>
+                <h3>Incident Management/Response Planning:</h3>
+                <label for="respond-planning">1. Is there a formal incident response plan (IRP) that is regularly updated & tested that defines how to handle security incidents?</label>
                 <select name="respond-planning" id="respond-planning" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="respond-planning">2. Are roles and responsibilities for incident response clearly assigned and documented?</label>
+                <select name="respond-planning" id="respond-planning" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="respond-planning">3. Are external stakeholders, including regulators and partners, informed of incidents?</label>
+                <select name="respond-planning" id="respond-planning" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
             <div class="question">
-                <label for="respond-communication">8. Communications: Are there communication protocols for internal and external stakeholders in case of a cyber incident?</label>
-                <select name="respond-communication" id="respond-communication" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                <h3>Incident Analysis:</h3>
+                <label for="respond-analysis">1. Are root cause analyses conducted for each security incident?</label>
+                <select name="respond-analysis" id="respond-analysis" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="respond-analysis">2. Is forensic evidence collected and preserved during incident investigations?</label>
+                <select name="respond-analysis" id="respond-analysis" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="respond-analysis">3. Is there a process for reviewing the effectiveness of the incident response plan?</label>
+                <select name="respond-analysis" id="respond-analysis" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
-            <!-- Recover Function (Recovery Planning, Improvements) -->
+            <div class="question">
+                <h3>Communication</h3>
+                <label for="respond-communication">1. Are there communication protocols for internal and external stakeholders in case of a cyber incident?</label>
+                <select name="respond-communication" id="respond-communication" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="respond-communication">2. Do you have a media management plan for cybersecurity incidents?</label>
+                <select name="respond-communication" id="respond-communication" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <h3>Incident Mitigation:</h3>
+                <label for="respond-mitigation">1. Are containment strategies in place to  identify, eradicate or minimize the impact of a security incident?</label>
+                <select name="respond-mitigation" id="respond-mitigation" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="respond-mitigation">2. Are security controls enhanced post-incident to prevent recurrence?</label>
+                <select name="respond-mitigation" id="respond-mitigation" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="respond-mitigation">3. Is mitigation documented and steps taken to remediate the issue?</label>
+                <select name="respond-mitigation" id="respond-mitigation" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+            </div>
+
+            <!-- Recover -->
             <h2>Recover</h2>
 
             <div class="question">
-                <label for="recover-planning">9. Recovery Planning: Does the organization have a recovery plan to restore services after a cybersecurity incident?</label>
+                <h3>Incident Recovery Plan Execution</h3>
+                <label for="recover-planning">1. Is there a documented disaster recovery (DR) plan for critical systems and data?</label>
                 <select name="recover-planning" id="recover-planning" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="recover-planning">2. Are recovery point objectives (RPOs) and recovery time objectives (RTOs) clearly defined?</label>
+                <select name="recover-planning" id="recover-planning" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="recover-planning">3. Are critical assets prioritized in the recovery plan based on business impact?</label>
+                <select name="recover-planning" id="recover-planning" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
             <div class="question">
-                <label for="recover-improvement">10. Improvements: Are lessons learned from past incidents used to improve future response and recovery strategies?</label>
+                <h3>Backup and Restoration</h3>
+                <label for="recover-backup">1. Do you have an off-site backup strategy to ensure data availability in case of a breach?</label>
+                <select name="recover-backup" id="recover-backup" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="recover-backup">2. Are backups regularly tested to ensure they can be restored in a timely manner?</label>
+                <select name="recover-backup" id="recover-backup" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="recover-backup">3. Is there a formal process for validating the integrity of restored data?</label>
+                <select name="recover-backup" id="recover-backup" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <h3>Incident Recovery Communication</h3>
+                <label for="recover-communication">1. Do you have protocols for internal and external communication post-recovery?</label>
+                <select name="recover-communication" id="recover-communication" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="recover-communication">2. Is there a communication strategy for reassuring clients and stakeholders after an incident?</label>
+                <select name="recover-communication" id="recover-communication" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="recover-communication">3. Do you provide summaries, actions taken and post-recovery report to senior management and relevant parties?</label>
+                <select name="recover-communication" id="recover-communication" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <h3>Improvements</h3>
+                <label for="recover-improvement">1. Are lessons learned from past incidents used to improve future response and recovery strategies?</label>
                 <select name="recover-improvement" id="recover-improvement" required>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
+                </select>
+                <label for="recover-improvement">2. Do you perform regular audits of the recovery plan's effectiveness?</label>
+                <select name="recover-improvement" id="recover-improvement" required>
+                    <option>...</option>
+                    <option value="high">No</option>
+                    <option value="medium">Partially</option>
+                    <option value="low">Yes</option>
                 </select>
             </div>
 
             <!-- <button type="submit">Submit Assessment</button> -->
         </form>
     </div>
+    <hr>
 
 
     <!-- Results Section -->
     <div class="results-section" id="results-section" style="display: block;">
         <h2>Risk Assessment Results</h2>
-        <!-- Table View for Detailed Findings and Recommendations -->
-<div class="table-container">
-    <table id="findingsTable" border="1">
-        <thead>
-            <tr>
-                <th>Category</th>
-                <th>Risk Score</th>
-                <th>Risk Level</th>
-                <th>Recommendations</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Dynamic content will be inserted here -->
-        </tbody>
+        <div class="table-container">
+            <table id="findingsTable" border="1">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Risk Score</th>
+                        <th>Risk Level</th>
+                        <th>Recommendations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- dynamic table content -->
+                </tbody>
     </table>
 </div>
-        <!-- Chart Canvas -->
+<hr>
+        <!-- Radar Chart -->
         <canvas id="riskChart" style="max-height: 400px;"></canvas>
-        <!-- Bar Chart Section -->
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+        <!-- Bar Chart -->
         <canvas id="barChart" style="max-height: 400px;"></canvas>
-        <!-- Pie Chart-->
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+        <!-- Pie Chart -->
         <canvas id="pieChart" style="max-height: 400px;"></canvas>
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
         <!-- Stacked Bar Chart -->
         <canvas id="stackedBarChart" style="max-height: 400px;"></canvas>
+        <hr class="border-b border-gray-100 opacity-50 my-0 py-0" />
         <!-- Line Chart -->
         <canvas id="lineChart" style="max-height: 400px;"></canvas>
     </div>

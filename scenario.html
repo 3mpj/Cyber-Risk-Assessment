@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Threat Scenarios & CSF Framework</title>
+    <link rel="stylesheet" href="scen.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Cyber Threat Scenarios</h1>
+    <p>Explore real-world cyber threat scenarios, understand the NIST Cybersecurity Framework (CSF) approach, and learn best practices for mitigation and response.</p>
+
+    <div class="scenarios-grid">
+        
+        <!-- Scenario Card: Ransomware Attack -->
+        <div class="scenario-card">
+            <h2>Ransomware Attack</h2>
+            <p class="scenario-description">A level 5 healthcare organization is hit by a ransomware attack after the Chief Medical Officer downloaded a malware that encrypted patient records and critical systems. The attackers demand a hefty ransom, threatening to leak sensitive data. All hospital operations are halted, and lives may be at risk if systems aren't restored quickly. The organization must act fast to mitigate the impact.</p>
+            <div id="ransomwareDetails" class="scenario-details hidden">
+                <h3>CSF Steps</h3>
+                <div class="step"><span class="step-icon">🕵️</span><b>Identify:</b> Map critical assets, vulnerabilities, and potential impacts of ransomware across the organization.</div>
+                <div class="step"><span class="step-icon">🔒</span><b>Protect:</b> Implement access control, regular backups, and employee training to prevent unauthorized access.</div>
+                <div class="step"><span class="step-icon">🔍</span><b>Detect:</b> Monitor and detect unusual file activity to identify early stages of ransomware.</div>
+                <div class="step"><span class="step-icon">⚠️</span><b>Respond:</b> Contain the infection, isolate affected systems, notify stakeholders, and consult with law enforcement.</div>
+                <div class="step"><span class="step-icon">🔄</span><b>Recover:</b> Restore data from backups, reassess security, and review defenses to prevent future attacks.</div>
+            </div>
+        </div>
+
+        <!-- Scenario Card: Denial of Service (DoS) Attack -->
+        <div class="scenario-card">
+            <h2>Denial of Service (DoS) Attack</h2>
+            <p class="scenario-description">A retail company's online store faces a massive influx of illegitimate traffic, causing the server to crash and the website to become inaccessible to legitimate customers. This coordinated DoS attack by a known hacktivist group results in significant revenue loss and a damaged reputation, prompting the need for effective defensive strategies.</p>
+            <div id="dosDetails" class="scenario-details hidden">
+                <h3>CSF Steps</h3>
+                <div class="step"><span class="step-icon">🕵️</span><b>Identify:</b> Assess critical assets, services, and points of vulnerability for DoS attacks.</div>
+                <div class="step"><span class="step-icon">🔒</span><b>Protect:</b> Implement rate limiting, load balancing, and firewall rules to mitigate DoS risks.</div>
+                <div class="step"><span class="step-icon">🔍</span><b>Detect:</b> Monitor for unusual traffic patterns indicating a potential DoS attack.</div>
+                <div class="step"><span class="step-icon">⚠️</span><b>Respond:</b> Block malicious IPs, reroute traffic, and alert incident response teams.</div>
+                <div class="step"><span class="step-icon">🔄</span><b>Recover:</b> Reassess network configurations, enhance detection methods, and test backup servers.</div>
+            </div>
+        </div>
+
+        <!-- Scenario Card: Ransomware Attack -->
+        <div class="scenario-card">
+            <h2>Man-in-the-Middle Attack</h2>
+            <p class="scenario-description">During an important conference call with the finance team, a hacker intercepts the communication, altering transaction instructions without detection. The organization risks losing confidential data and faces potential financial loss, highlighting the need for secure communications and network monitoring.</p>
+            <div id="mitmDetails" class="scenario-details hidden">
+                <h3>CSF Steps</h3>
+                <div class="step"><span class="step-icon">🕵️</span><b>Identify:</b>  Assess network architecture & identify points of vulnerability in communications pathways. Map out critical assets that transmit sensitive data over the network.</div>
+                <div class="step"><span class="step-icon">🔒</span><b>Protect:</b> Use encryption for all network communications, implement VPNs, and enable mutual authentication to protect against unauthorized interception.</div>
+                <div class="step"><span class="step-icon">🔍</span><b>Detect:</b> Set up anomaly detection for unusual access patterns and monitor for irregularities in data traffic that may indicate interception.</div>
+                <div class="step"><span class="step-icon">⚠️</span><b>Respond:</b> Isolate affected communications, revoke any compromised credentials, and establish secure channels for ongoing communications.</div>
+                <div class="step"><span class="step-icon">🔄</span><b>Recover:</b> Restore secure communication channels, perform system and software updates, and conduct a post-incident review to enhance future defenses.</div>
+            </div>
+        </div>
+
+        <!-- Scenario Card -->
+        <div class="scenario-card">
+            <h2>Phishing Attack</h2>
+            <p class="scenario-description">An employee receives an email from a supposed IT administrator requesting password changes. Without realizing, they submit login credentials, allowing attackers access to sensitive files.</p>
+            <div id="mitmDetails" class="scenario-details hidden">
+                <h3>CSF Steps</h3>
+                <div class="step"><span class="step-icon">🕵️</span><b>Identify:</b> Recognize which departments and employees are at the highest risk of phishing attacks. Conduct regular risk assessments and evaluate access privileges for sensitive data.</div>
+                <div class="step"><span class="step-icon">🔒</span><b>Protect:</b> Implement email filtering solutions, conduct routine employee training on phishing awareness, and use multi-factor authentication (MFA) to protect accounts.</div>
+                <div class="step"><span class="step-icon">🔍</span><b>Detect:</b> Monitor for suspicious email activity and unauthorized login attempts. Deploy phishing detection tools to identify and block malicious emails.</div>
+                <div class="step"><span class="step-icon">⚠️</span><b>Respond:</b> Immediately disable compromised accounts, notify affected employees, and block malicious email sources.</div>
+                <div class="step"><span class="step-icon">🔄</span><b>Recover:</b> Reinforce anti-phishing training programs, review and update email security protocols, and assess any data loss or unauthorized access.</div>
+            </div>
+        </div>
+
+        <!-- Scenario Card -->
+        <div class="scenario-card">
+            <h2>Insider Threat Attack</h2>
+            <p class="scenario-description">Kamau, is a disgruntled, overworked and underpaid employee with administrative access, he takes advantage of his system privileges and begins altering files and deleting important records.</p>
+            <div id="mitmDetails" class="scenario-details hidden">
+                <h3>CSF Steps</h3>
+                <div class="step"><span class="step-icon">🕵️</span><b>Identify:</b> Identify critical assets and users with privileged access. Conduct regular audits on access controls and monitor employee role changes.</div>
+                <div class="step"><span class="step-icon">🔒</span><b>Protect:</b> Enforce least privilege principles, monitor high-risk user activities, and implement data loss prevention (DLP) tools.</div>
+                <div class="step"><span class="step-icon">🔍</span><b>Detect:</b> Utilize insider threat detection software to monitor for unusual behaviors, such as unauthorized data access or downloads.</div>
+                <div class="step"><span class="step-icon">⚠️</span><b>Respond:</b> Investigate and isolate insider threats immediately, revoke access for individuals displaying suspicious behavior, and notify relevant stakeholders.</div>
+                <div class="step"><span class="step-icon">🔄</span><b>Recover:</b> Adjust access policies and privileges, re-evaluate user access levels, and refine insider threat detection capabilities.</div>
+            </div>
+        </div>
+
+        <!-- Scenario Card -->
+        <div class="scenario-card">
+            <h2>SQL Injection Attack</h2>
+            <p class="scenario-description">A hacker exploits a vulnerable input field on the organization's website, injecting malicious SQL commands to access the entire customer database.</p>
+            <div id="mitmDetails" class="scenario-details hidden">
+                <h3>CSF Steps</h3>
+                <div class="step"><span class="step-icon">🕵️</span><b>Identify:</b> Identify and catalog all web applications and input fields that interact with databases. Review coding practices for potential SQL vulnerabilities.</div>
+                <div class="step"><span class="step-icon">🔒</span><b>Protect:</b> Implement input validation and sanitization for all user inputs, enforce least privilege access for database accounts, and regularly update software to patch known vulnerabilities.</div>
+                <div class="step"><span class="step-icon">🔍</span><b>Detect:</b> Monitor for unusual database query patterns and log all SQL interactions for signs of injection attempts.</div>
+                <div class="step"><span class="step-icon">⚠️</span><b>Respond:</b>  Block malicious IPs, isolate affected databases, and update database credentials if compromise is detected.</div>
+                <div class="step"><span class="step-icon">🔄</span><b>Recover:</b> Revalidate database security settings, update web applications with secure code practices, and conduct security audits to prevent future injections.</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="notes.js"></script>
+</body>
+</html>
