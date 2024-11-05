@@ -32,7 +32,7 @@ const scenarios = {
         ]
     },
     mitm: {
-        purpose: "To simulate a MitM attack and evaluate the organization’s security posture and encryption practices.",
+        purpose: "To simulate a MitM attack and evaluate the organization's security posture and encryption practices.",
         objectives: [
             "Test secure communication protocols.",
             "Evaluate detection methods for unusual network activity.",
