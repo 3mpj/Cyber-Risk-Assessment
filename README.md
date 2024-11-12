@@ -15,3 +15,6 @@ Cyber Risk Assessment tool for 418 Cyber Security Project
 *Learn Module*\
 *Assess Module*\
 *Scenarios*
+
+### Documentation
+https://docs.google.com/document/d/1wmQJ0d51jz5rCpYnMHrNSJFQSxbKGQatZupndF16ods/edit?usp=sharing
