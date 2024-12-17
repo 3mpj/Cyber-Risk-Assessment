@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let mediumRiskCount = 0;
         let lowRiskCount = 0;
     
-        // Count the risk levels from the riskData
+        // risk levels count from the riskData
         for (let category in riskData) {
             riskData[category].forEach(score => {
                 if (score >= 2.5) {
@@ -84,10 +84,9 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     
-        // Update the pie chart's data
+        // Update pie chart's data
         pieChart.data.datasets[0].data = [highRiskCount, mediumRiskCount, lowRiskCount];
     
-        // Re-render the chart to show the updated data
         pieChart.update();
     }
 
@@ -163,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 <td>${recommendation}</td>  <!-- Show custom recommendations -->
             `;
     
-            // Append the row to the table
             tableBody.appendChild(row);
         });
     }
@@ -176,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
         lineChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: timeLabels, // This will be dynamically updated with timestamps/assessments
+                labels: timeLabels, 
                 datasets: [{
                     label: 'Average Risk Over Time',
                     data: riskOverTimeData, // Dynamically updated with the average risk scores
@@ -200,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             display: true,
                             text: 'Average Risk Score'
                         },
-                        max: 3 // Adjust according to the maximum risk score scale
+                        max: 3 
                     }
                 }
             }
@@ -208,8 +206,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function updateLineChart() {
-        // Get the current timestamp or assessment number (could also be a date)
-        const currentTime = new Date().toLocaleString(); // You can format this based on your needs
+        const currentTime = new Date().toLocaleString(); 
     
         // Calculate the current average risk score across all categories
         let totalRisk = 0;
@@ -228,7 +225,6 @@ document.addEventListener("DOMContentLoaded", function() {
         timeLabels.push(currentTime);
         riskOverTimeData.push(averageRiskScore);
     
-        // Update the line chart with the new data
         lineChart.update();
     }
 
@@ -240,22 +236,22 @@ document.addEventListener("DOMContentLoaded", function() {
         stackedBarChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: categories, // ['Identify', 'Protect', 'Detect', 'Respond', 'Recover']
+                labels: categories, // identify, protect....
                 datasets: [{
                     label: 'High Risk',
-                    data: [], // This will be dynamically updated with high-risk scores
+                    data: [], 
                     backgroundColor: 'rgba(255, 99, 132, 0.2)', // High Risk
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 1
                 }, {
                     label: 'Medium Risk',
-                    data: [], // This will be dynamically updated with medium-risk scores
+                    data: [], 
                     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Medium Risk
                     borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 1
                 }, {
                     label: 'Low Risk',
-                    data: [], // This will be dynamically updated with low-risk scores
+                    data: [],
                     backgroundColor: 'rgba(75, 192, 192, 0.2)', // Low Risk
                     borderColor: 'rgba(75, 192, 192, 1)',
                     borderWidth: 1
@@ -269,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     y: {
                         stacked: true,
                         beginAtZero: true,
-                        max: 10 // Set a max that fits your expected data range
+                        max: 10 
                     }
                 }
             }
@@ -306,7 +302,6 @@ document.addEventListener("DOMContentLoaded", function() {
         stackedBarChart.data.datasets[1].data = mediumRiskCounts;
         stackedBarChart.data.datasets[2].data = lowRiskCounts;
     
-        // Re-render the chart to show the updated data
         stackedBarChart.update();
     }
     
@@ -316,10 +311,10 @@ function initializeBarChart() {
     barChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: categories, // ['Identify', 'Protect', 'Detect', 'Respond', 'Recover']
+            labels: categories,
             datasets: [{
                 label: 'Average Risk Score',
-                data: [], // This will be updated with the risk scores dynamically
+                data: [], 
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -352,7 +347,7 @@ function initializeBarChart() {
                         display: true,
                         text: 'Average Risk Score'
                     },
-                    max: 3 // Risk score max is 3
+                    max: 3 
                 }
             }
         }
@@ -367,7 +362,6 @@ function updateBarChart() {
     // Update the chart's data
     barChart.data.datasets[0].data = averageScores;
 
-    // Re-render the chart to show the updated data
     barChart.update();
 }
 window.onload = function() {
@@ -380,9 +374,6 @@ window.onload = function() {
     // Initialize the line chart for risk over time
     initializeLineChart();
 };
-
-
-    
     // Initialize radar chart with empty data
     function initializeChart() {
         const ctx = document.getElementById('riskChart').getContext('2d');
@@ -392,7 +383,7 @@ window.onload = function() {
                 labels: categories,
                 datasets: [{
                     label: 'Risk Levels',
-                    data: [0, 0, 0, 0, 0], // Start with zero values
+                    data: [0, 0, 0, 0, 0], 
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 1
@@ -419,14 +410,13 @@ window.onload = function() {
             const scores = riskData[category];
             if (scores.length === 0) return 0;
             const sum = scores.reduce((a, b) => a + b, 0);
-            return (sum / scores.length).toFixed(2); // Calculate average for each category
+            return (sum / scores.length).toFixed(2); 
         });
 
         chart.data.datasets[0].data = averages;
         chart.update();
     }
 
-    // Function to calculate risk and update visualization
     function calculateRisk() {
         // Reset the risk data object
         riskData = {
@@ -437,13 +427,13 @@ window.onload = function() {
             'Recover': []
         };
 
-        // Get the selected risk levels for each area and categorize them
+        // categorize risk lvl
         riskInputs.forEach(input => {
             const value = input.value;
             const riskScore = riskMapping[value];
             const fieldId = input.id;
 
-            // Map the input to the correct category
+            // Map inputs to their category
             if (fieldId.startsWith('identify')) {
                 riskData['Identify'].push(riskScore);
             } else if (fieldId.startsWith('protect')) {
@@ -465,9 +455,8 @@ window.onload = function() {
         updateLineChart();
         updateFindingsTable();
 
-        // Display average risk scores in the results section
-        resultsSection.style.display = 'block'; // Make sure the results section is visible
-        riskScores.innerHTML = ''; // Clear previous results
+        resultsSection.style.display = 'block'; 
+        riskScores.innerHTML = ''; 
 
         categories.forEach(category => {
             const scores = riskData[category];
@@ -487,7 +476,6 @@ window.onload = function() {
     // Initialize the radar chart
     initializeChart();
 
-    // Add event listeners to all select inputs
     riskInputs.forEach(input => {
         input.addEventListener('change', calculateRisk);
     });

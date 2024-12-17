@@ -9,9 +9,7 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-    <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
       .gradient {
         background: linear-gradient(90deg, #5e33d5 0%, #007bff 100%);
@@ -90,27 +88,25 @@
     var navaction = document.getElementById("navAction");
     var brandname = document.getElementById("brandname");
     var toToggle = document.querySelectorAll(".toggleColour");
-    var navLinks = document.querySelectorAll("#nav-content a"); // Add this line to select all nav links
+    var navLinks = document.querySelectorAll("#nav-content a");
 
     document.addEventListener("scroll", function () {
     scrollpos = window.scrollY;
 
     if (scrollpos > 10) {
         header.classList.add("bg-white");
-        if(navaction) {  // Check if navaction exists
+        if(navaction) { 
             navaction.classList.remove("bg-white");
             navaction.classList.add("gradient");
             navaction.classList.remove("text-gray-800");
             navaction.classList.add("text-white");
         }
         
-        // Update toggle elements
         for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.remove("text-white");
             toToggle[i].classList.add("text-gray-800");
         }
         
-        // Update nav links color
         navLinks.forEach(link => {
             link.classList.remove("text-white");
             link.classList.add("text-gray-800");
@@ -121,20 +117,18 @@
         navcontent.classList.add("bg-white");
     } else {
         header.classList.remove("bg-white");
-        if(navaction) {  // Check if navaction exists
+        if(navaction) {  
             navaction.classList.remove("gradient");
             navaction.classList.add("bg-white");
             navaction.classList.remove("text-white");
             navaction.classList.add("text-gray-800");
         }
         
-        // Update toggle elements
         for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.remove("text-gray-800");
             toToggle[i].classList.add("text-white");
         }
         
-        // Update nav links color
         navLinks.forEach(link => {
             link.classList.remove("text-gray-800");
             link.classList.add("text-white");
@@ -147,8 +141,6 @@
 });
     </script>
     <script>
-      /*Toggle dropdown list*/
-      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
       var navMenuDiv = document.getElementById("nav-content");
       var navMenu = document.getElementById("nav-toggle");
@@ -159,16 +151,13 @@
 
         //Nav Menu
         if (!checkParent(target, navMenuDiv)) {
-          // click NOT on the menu
           if (checkParent(target, navMenu)) {
-            // click on the link
             if (navMenuDiv.classList.contains("hidden")) {
               navMenuDiv.classList.remove("hidden");
             } else {
               navMenuDiv.classList.add("hidden");
             }
           } else {
-            // click both outside link and outside menu, hide menu
             navMenuDiv.classList.add("hidden");
           }
         }

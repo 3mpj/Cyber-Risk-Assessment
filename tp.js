@@ -107,7 +107,6 @@ function populateFields() {
         document.getElementById("threatHazard").value = scenarioData.threatHazard;
         document.getElementById("scenarioDescription").value = scenarioData.scenarioDescription;
 
-        // Populate activities
         document.getElementById("activity1").value = scenarioData.activities[0];
         document.getElementById("activity2").value = scenarioData.activities[1];
         document.getElementById("activity3").value = scenarioData.activities[2];

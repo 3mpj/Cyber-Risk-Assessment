@@ -1,11 +1,9 @@
-/* Global Font */
 body {
     font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.6;
 }
 
-/* Container */
 .container {
     width: 80%;
     max-width: 900px;
@@ -16,7 +14,6 @@ body {
     border: 1px solid #ddd;
 }
 
-/* Heading Styles */
 h1 {
     font-size: 1.8em;
     font-weight: bold;
@@ -33,7 +30,6 @@ h2 {
     padding-bottom: 0.2em;
 }
 
-/* Form Styles */
 form label {
     font-weight: bold;
     margin-top: 1em;
@@ -54,14 +50,12 @@ form select {
     background-color: #fdfdfd;
 }
 
-/* Section Styling */
 .section {
     padding: 15px;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
 }
 
-/* Button Styles */
 button {
     background-color: #1a4d8f;
     color: #fff;
