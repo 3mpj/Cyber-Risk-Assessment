@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="notes.css">
 </head>
 <body>
+    
+        <!--Nav-->
+        <nav id="header">
+            <div class="container">
+              <a class="logo" href="index.html">CyberSecurity</a>
+              <button class="toggle-button" id="nav-toggle">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="24" height="24">
+                  <title>Menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+              </button>
+              <div class="menu" id="nav-content">
+                <ul>
+                  <li><a href="learn.html">Learn</a></li>
+                  <li><a href="survey.html">Assessment</a></li>
+                  <li><a href="scenario.html">Scenarios</a></li>
+                  <li><a href="tp.html">Table Top Exercise</a></li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+          </nav>
+          
     <div class="learning-container">
         <header>
             <h1>Welcome to Cyber Risk Management Learning Page</h1>
@@ -361,7 +384,13 @@
             <button onclick="window.location.href='survey.html'">Proceed to Cyber Risk Assessment</button>
         </footer>
     </div>
-
+    <script>
+        // JavaScript for toggle functionality
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+          const navContent = document.getElementById('nav-content');
+          navContent.classList.toggle('visible');
+        });
+      </script>
     <script src="notes.js"></script>
 </body>
 </html>

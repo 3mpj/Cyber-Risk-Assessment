@@ -78,3 +78,118 @@ button:hover {
 .hidden {
     display: none;
 }
+
+#header {
+    position: static;
+    width: 100%;
+    top: 0;
+    z-index: 30;
+    background-color: #007bff;
+    color: white;
+  }
+
+  #container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+  hr {
+    margin: 0px; 
+    border-bottom-width: 1px; 
+    border-color: rgb(243,244,246); 
+    padding: 0px;  
+    opacity: 0.25;
+  }
+  
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+  .toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .toggle-button:hover {
+    transform: scale(1.05);
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 1rem;
+    z-index: 20;
+  }
+
+  .menu.visible {
+    display: flex;
+  }
+
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu li {
+    margin: 0.5rem 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .menu a:hover {
+    color: black;
+  }
+
+  @media (min-width: 1024px) {
+    .toggle-button {
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      background: transparent;
+      width: auto;
+      padding: 0;
+    }
+
+    .menu ul {
+      flex-direction: row;
+    }
+
+    .menu li {
+      margin: 0 1rem;
+    }
+
+    .menu a {
+      color: white;
+    }
+  }

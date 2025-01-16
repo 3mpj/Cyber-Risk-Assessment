@@ -8,6 +8,27 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!--Nav-->
+    <nav id="header">
+        <div id="container">
+          <a class="logo" href="index.html">CyberSecurity</a>
+          <button class="toggle-button" id="nav-toggle">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="24" height="24">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+          <div class="menu" id="nav-content">
+            <ul>
+              <li><a href="learn.html">Learn</a></li>
+              <li><a href="survey.html">Assessment</a></li>
+              <li><a href="scenario.html">Scenarios</a></li>
+              <li><a href="tp.html">Table Top Exercise</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </nav>
     <div class="container">
         <h1>Cyber Risk Assessment Questionnaire</h1>
         <p>Below are a set of questions that are designed to help organizations assess their Cyber Risk Management Position</p>
@@ -516,18 +537,23 @@
 </div>
 <hr>
         <!-- Radar Chart -->
+        <h2>Radar Chart: Risk Distribution</h2>
         <canvas id="riskChart" style="max-height: 400px;"></canvas>
         <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
         <!-- Bar Chart -->
+        <h2>Bar Chart: Risk Distribution</h2>
         <canvas id="barChart" style="max-height: 400px;"></canvas>
         <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
         <!-- Pie Chart -->
+        <h2>Pie Chart: Risk Distribution</h2>
         <canvas id="pieChart" style="max-height: 400px;"></canvas>
         <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
         <!-- Stacked Bar Chart -->
+        <h2>Stacked Chart: Risk Distribution</h2>
         <canvas id="stackedBarChart" style="max-height: 400px;"></canvas>
         <hr class="border-b border-gray-100 opacity-50 my-0 py-0" />
         <!-- Line Chart -->
+        <h2>Line Chart: Risk Distribution Over Time</h2>
         <canvas id="lineChart" style="max-height: 400px;"></canvas>
     </div>
 

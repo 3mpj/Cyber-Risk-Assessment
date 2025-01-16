@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
         lineChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: timeLabels, 
+                labels: timeLabels,
                 datasets: [{
                     label: 'Average Risk Over Time',
                     data: riskOverTimeData, // Dynamically updated with the average risk scores
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     x: {
                         title: {
                             display: true,
-                            text: 'Time (Assessments or Dates)'
+                            text: 'Risk Over Time'
                         }
                     },
                     y: {
@@ -198,35 +198,34 @@ document.addEventListener("DOMContentLoaded", function() {
                             display: true,
                             text: 'Average Risk Score'
                         },
-                        max: 3 
+                        max: 3
                     }
                 }
             }
         });
     }
-
+    
     function updateLineChart() {
-        const currentTime = new Date().toLocaleString(); 
+        // Get the last time label and calculate the next time point after 3 months
+        const lastTime = timeLabels.length > 0 ? new Date(timeLabels[timeLabels.length - 1]) : new Date();
+        const nextTime = new Date(lastTime);
+        nextTime.setMonth(lastTime.getMonth() + 3); // Increment by 3 months
     
-        // Calculate the current average risk score across all categories
-        let totalRisk = 0;
-        let count = 0;
+        // Format the next time point as MM/YYYY
+        const formattedNextTime = `${String(nextTime.getMonth() + 1).padStart(2, '0')}/${nextTime.getFullYear()}`;
     
-        for (let category in riskData) {
-            riskData[category].forEach(score => {
-                totalRisk += score;
-                count++;
-            });
-        }
+        // Calculate the next average risk score based on a trend
+        const lastRiskScore = riskOverTimeData.length > 0 ? riskOverTimeData[riskOverTimeData.length - 1] : 2.0; // Default start value
+        const riskChange = Math.random() * 0.5 - 0.25; // Small random increase/decrease
+        const nextRiskScore = Math.min(3, Math.max(0, (parseFloat(lastRiskScore) + riskChange).toFixed(2))); // Keep within 0-3 range
     
-        const averageRiskScore = (count > 0) ? (totalRisk / count).toFixed(2) : 0;
-    
-        // Push the current time and risk score to the chart data
-        timeLabels.push(currentTime);
-        riskOverTimeData.push(averageRiskScore);
+        // Push the next time point and risk score to the chart data
+        timeLabels.push(formattedNextTime);
+        riskOverTimeData.push(nextRiskScore);
     
         lineChart.update();
     }
+    
 
     
 

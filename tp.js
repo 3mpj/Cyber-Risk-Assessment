@@ -121,7 +121,7 @@ function downloadPDF() {
 
     const options = {
         margin: 0.5,
-        filename: 'Cybersecurity_Exercise.pdf',
+        filename: 'Table Top Cybersecurity Exercise.pdf',
         html2canvas: { scale: 2 },
         jsPDF: { format: 'a4', orientation: 'portrait' }
     };
