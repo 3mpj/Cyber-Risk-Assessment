@@ -21,3 +21,6 @@ Cyber Risk Assessment tool for CSC 418 Cyber Security Project
 
 ### Documentation (Access with school email )
 https://docs.google.com/document/d/1wmQJ0d51jz5rCpYnMHrNSJFQSxbKGQatZupndF16ods/edit?usp=sharing
+
+### Presentation
+https://www.canva.com/design/DAGc6DW8j4U/5sKoDOvuPe4C6_ikWEGWAQ/edit
