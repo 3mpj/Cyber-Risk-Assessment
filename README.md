@@ -1,3 +1,7 @@
+### CyberIQ - A risk assessment and management platform using National Institute of Standards and Technology(NIST) Cyber Security Framework(CSF)
+
+**Outlines the functions; Govern, Identify, Protect, Detect, Respond and Recover**
+
 ### Authors
 @3mpj\
 @ay-error
@@ -14,9 +18,3 @@
 *Learn Module*\
 *Assess Module*\
 *Scenarios*
-
-### Documentation (Access with school email )
-https://docs.google.com/document/d/1wmQJ0d51jz5rCpYnMHrNSJFQSxbKGQatZupndF16ods/edit?usp=sharing
-
-### Presentation
-https://www.canva.com/design/DAGc6DW8j4U/5sKoDOvuPe4C6_ikWEGWAQ/edit
