@@ -1,8 +1,4 @@
-# CyberAssessment Platform
-Cyber Risk Assessment tool for CSC 418 Cyber Security Project
-
 ### Authors
-@K-Jeff254\
 @3mpj\
 @ay-error
 
